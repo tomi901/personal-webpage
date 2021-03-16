@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.scss';
+import TextFileExplorer from './TextFileExplorer';
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
         <p className="see-more">↓ Scroll down to see more ↓</p>
       </header>
       <section className="App-content">
-
+        <TextFileExplorer></TextFileExplorer>
       </section>
       <footer>
       </footer>
