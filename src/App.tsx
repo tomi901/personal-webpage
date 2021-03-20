@@ -1,18 +1,19 @@
 import React from 'react';
 import './App.scss';
-import TextFileExplorer from './TextFileExplorer';
+import picture from './picture.png';
 
 function App() {
   return (
     <div className="App">
       <header>
         <div className="content">
+          <img src={picture} className="picture" alt="Tomás Rinaldi's avatar" />
           <h1>Tomás Rinaldi</h1>
+          <h2>Developer</h2>
         </div>
         <p className="see-more">↓ Scroll down to see more ↓</p>
       </header>
       <section className="App-content">
-        <TextFileExplorer></TextFileExplorer>
       </section>
       <footer>
       </footer>
