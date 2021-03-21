@@ -1,11 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Montserrat:wght@300&display=swap');
 
 .App {
-  text-align: center;
-  font-family: 'Inconsolata', monospace;
+  font-family: 'Montserrat', sans-serif;
 }
 
-header {
+.App header {
+  font-family: 'Inconsolata', monospace;
+
+  text-align: center;
   background: #282c34;
   color: white;
   font-size: calc(10px + 2vmin);
@@ -51,7 +53,89 @@ header {
 }
 
 .App-content {
+  font-family: 'Montserrat', sans-serif;
+
   min-height: 1000px;
+  background-color: #121825;
+  color: white;
+
+  section {
+    padding: 20px 5%;
+  }
+
+  h1 {
+    font-size: 48px;
+  }
+
+  p {
+    font-size: 24px;
+    color: #CCC;
+
+    @media (min-width : 600px) {
+      text-align: justify;
+    }
+
+    .small {
+      font-size: 12px;
+    }
+
+    strong {
+      font-weight: 800;
+      color: white;
+    }
+  }
+
+  hr {
+    margin: 40px 0px;
+  }
+
+  .media-container {
+    max-width: 560px;
+    margin: 50px auto;
+  }
+
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+  }
+
+  .video-container iframe, .video-container object, .video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.btn-array {
+  display: flex;
+  align-content: stretch;
+  align-items: stretch;
+  width: 100%;
+
+  @media (max-width : 600px) {
+    flex-direction: column;
+  }
+
+  .btn {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #1e293f;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    font-size: 24px;
+
+    transition: background-color 800ms;
+
+    &:hover {
+      background-color: #293755;
+    }
+  }
 }
 
 
