@@ -4,7 +4,7 @@ import picture from './picture.png';
 
 function App() {
   const particles: JSX.Element[] = [];
-  for (let i = 0; i < 100; i++) {
+  for (let i = 0; i < 300; i++) {
     particles.push(<div className="particle" key={i}></div>);
   }
 

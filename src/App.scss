@@ -6,7 +6,7 @@
 }
 
 header {
-  background-color: #282c34;
+  background: #282c34;
   color: white;
   font-size: calc(10px + 2vmin);
   height: 100vh;
@@ -66,7 +66,7 @@ header {
 }
 
 .particle {
-  $particleNum: 100;
+  $particleNum: 300;
 
   position: absolute;
   transform: translateY(-10vh);
@@ -76,7 +76,7 @@ header {
   border-radius: 100%;
   mix-blend-mode: screen;
   background: white;
-  opacity: 30%;
+  opacity: 5%;
 
   animation: fadein-frames 200ms infinite;
 
@@ -97,7 +97,7 @@ header {
   
   @for $i from 1 through $particleNum {
     &:nth-child(#{$i}) {
-      $circleSize: 4 + random(2);
+      $circleSize: 8 + random(3);
       width: $circleSize + px;
       height: $circleSize + px;
 
@@ -105,15 +105,17 @@ header {
       $framesName: "move-frames-" + $i;
       $moveDuration: 88000 + random(16000) + ms;
 
+      filter: blur(2px);
+
       animation-name: #{$framesName};
       animation-duration: $moveDuration;
-      animation-delay: random(87000) - 40000 + ms;
+      animation-delay: random(87000) - 40000 + ms; // Negative values let the particles start before
       animation-iteration-count: infinite;
 
       @keyframes #{$framesName} {
         from {
           transform: translate3d(
-            #{random(100) + vw},
+            #{random(130) - 15 + vw},
             #{$startPositionY + vh},
             0
           );
