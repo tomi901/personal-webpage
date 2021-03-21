@@ -29,7 +29,6 @@ function AppHeader() {
           <h1>Tomás Rinaldi</h1>
           <h2>Developer</h2>
         </div>
-        <p className="see-more">↓ Scroll down to see more ↓</p>
   </header>
 }
 
@@ -46,7 +45,40 @@ function AppContent() {
     <div className="btn-array">
       {links.map((v, i) => <a key={i} className="btn" href={v.link} rel="noreferrer" target="_blank">{v.displayName}</a>)}
     </div>
+    <section>
+      <h1>About me</h1>
+      <p>
+        My name is Tomás <span className="small">(Or Tom)</span> Rinaldi.
+      </p>
+      <p>
+        I'm a full stack developer, having worked on applications using different languagues like <strong>JavaScript</strong> and <strong>C#</strong>, using technologies like <strong>Express.js</strong>, <strong>React</strong>, <strong>Firebase</strong>, <strong>Unity</strong> and <strong>Unreal Engine</strong>.
+      </p>
+      <p>
+      </p>
+      <hr></hr>
+      <h2>How I started</h2>
+      <p>
+        In school, I wanted to create videogames and enter the industry. In 2016 my first complete game was <strong>The Pixel</strong>, a simple mobile arcade game where pixels start to attack you and you have to use touch controls to destroy them.
+      </p>
+      <YoutubeVideo src="https://www.youtube.com/embed/D5NZZCRSHqw" />
+    </section>
   </section>
+}
+
+function YoutubeVideo(props: { src: string}) {
+  return <div className="media-container">
+    <div className="video-container">
+      <iframe width="560"
+        height="315"
+        src={props.src}
+        title="YouTube video player"
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        frameBorder="0"
+        allowFullScreen={true}
+        >
+      </iframe>
+    </div>
+  </div>
 }
 
 
