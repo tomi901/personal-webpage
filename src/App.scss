@@ -66,8 +66,7 @@ header {
 }
 
 .particle {
-  $particleNum: 200;
-  $particleColor: hsl(180, 100%, 80%);
+  $particleNum: 100;
 
   position: absolute;
   transform: translateY(-10vh);
@@ -108,7 +107,8 @@ header {
 
       animation-name: #{$framesName};
       animation-duration: $moveDuration;
-      animation-delay: random(37000) + ms;
+      animation-delay: random(87000) - 40000 + ms;
+      animation-iteration-count: infinite;
 
       @keyframes #{$framesName} {
         from {
@@ -127,8 +127,6 @@ header {
           );
         }
       }
-
-      animation-delay: random(4000) + ms;
     }
   }
 }
