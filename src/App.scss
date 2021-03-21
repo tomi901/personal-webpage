@@ -63,6 +63,8 @@ header {
   height: 100%;
 
   overflow: hidden;
+
+  opacity: 0.1;
 }
 
 .particle {
@@ -76,24 +78,6 @@ header {
   border-radius: 100%;
   mix-blend-mode: screen;
   background: white;
-  opacity: 5%;
-
-  animation: fadein-frames 200ms infinite;
-
-  @keyframes fade-frames {
-    0% {
-      opacity: 1;
-    }
-
-    50% {
-      opacity: 0.7;
-    }
-
-    100% {
-      opacity: 1;
-    }
-  }
-
   
   @for $i from 1 through $particleNum {
     &:nth-child(#{$i}) {
@@ -104,8 +88,6 @@ header {
       $startPositionY: random(10) + 100;
       $framesName: "move-frames-" + $i;
       $moveDuration: 88000 + random(16000) + ms;
-
-      filter: blur(2px);
 
       animation-name: #{$framesName};
       animation-duration: $moveDuration;
