@@ -1,10 +1,14 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import App from './App';
+import App, { AppHeader } from './App';
 
-// TODO: Only to test unit tests, will change this later
-test('Name is in document', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/Tomás Rinaldi/i);
-  expect(linkElement).toBeInTheDocument();
+
+test('Particles exist', () => {
+  const header = render(<AppHeader />);
+  const particlesContainers = header.baseElement.getElementsByClassName("particle-container");
+  expect(particlesContainers.length).toBeGreaterThan(0);
+
+  const particles = particlesContainers[0].getElementsByClassName("particle");
+  expect(particles.length).toBeGreaterThan(10);
 });
+

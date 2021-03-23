@@ -16,7 +16,7 @@ function App() {
 }
 
 
-function AppHeader() {
+export function AppHeader() {
   const particles: JSX.Element[] = [];
   for (let i = 0; i < 300; i++) {
     particles.push(<div className="particle" key={i}></div>);
