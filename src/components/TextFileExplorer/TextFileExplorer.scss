@@ -13,4 +13,16 @@
     .explorer-element {
         margin: 0;
     }
+
+    .element-name {
+        border-color: transparent;
+        border-style: dashed;
+        border-width: 2px;
+        padding: 0px 5px;
+
+        &:hover {
+            border-color: white;
+            cursor: pointer;
+        }
+    }
 }
