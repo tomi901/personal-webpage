@@ -1,4 +1,6 @@
 import React from 'react';
+import YoutubeVideo from './components/YoutubeVideo/YoutubeVideo';
+
 import './App.scss';
 import picture from './picture.png';
 
@@ -63,22 +65,6 @@ function AppContent() {
       <YoutubeVideo src="https://www.youtube.com/embed/D5NZZCRSHqw" />
     </section>
   </section>
-}
-
-function YoutubeVideo(props: { src: string}) {
-  return <div className="media-container">
-    <div className="video-container">
-      <iframe width="560"
-        height="315"
-        src={props.src}
-        title="YouTube video player"
-        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        frameBorder="0"
-        allowFullScreen={true}
-        >
-      </iframe>
-    </div>
-  </div>
 }
 
 
