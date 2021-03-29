@@ -1,5 +1,5 @@
 import React from "react";
-import YoutubeVideo from "components/YoutubeVideo/YoutubeVideo";
+import YoutubeVideo from "components/YoutubeVideo";
 import picture from "picture.png";
 
 

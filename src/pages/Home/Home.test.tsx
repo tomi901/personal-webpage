@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import Home, { HomeHeader } from './Home';
+import Home, { HomeHeader } from '.';
 
 test('Particles exist', () => {
     const header = render(<HomeHeader />);

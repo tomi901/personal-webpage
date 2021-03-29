@@ -16,8 +16,8 @@ function App() {
     <Router history={history}>
       <React.Suspense fallback={<p>Loading</p>}>
         <Switch>
-          <Route exact path="/" component={React.lazy(() => import('pages/Home/Home'))} />
-          <Route path="/career" component={React.lazy(() => import('pages/Career/Career'))} />
+          <Route exact path="/" component={React.lazy(() => import('pages/Home'))} />
+          <Route path="/career" component={React.lazy(() => import('pages/Career'))} />
           <Route component={React.lazy(() => import('pages/NotFound'))} />
         </Switch>
       </React.Suspense>
