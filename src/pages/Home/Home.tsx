@@ -1,6 +1,6 @@
 import React from "react";
-import YoutubeVideo from "../../components/YoutubeVideo/YoutubeVideo";
-import picture from "../../picture.png";
+import YoutubeVideo from "components/YoutubeVideo/YoutubeVideo";
+import picture from "picture.png";
 
 
 function Home() {
