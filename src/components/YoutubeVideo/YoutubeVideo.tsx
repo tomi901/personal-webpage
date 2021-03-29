@@ -12,7 +12,7 @@ function YoutubeVideo(props: { src: string }) {
                 title="YouTube video player"
                 allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 frameBorder="0"
-                allowFullScreen={true}
+                allowFullScreen
                 >
             </iframe>
             </div>
