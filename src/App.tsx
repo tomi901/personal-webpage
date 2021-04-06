@@ -18,6 +18,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={React.lazy(() => import('pages/Home'))} />
           <Route path="/career" component={React.lazy(() => import('pages/Career'))} />
+          <Route path="/hypnospace" component={React.lazy(() => import('pages/Hypnospace'))} />
           <Route component={React.lazy(() => import('pages/NotFound'))} />
         </Switch>
       </React.Suspense>
