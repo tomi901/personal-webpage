@@ -61,10 +61,7 @@ export function HomeContent() {
             JavaScript</strong> and <strong>C#</strong>, using technologies like <strong>Express.js</strong>, <strong>
             React</strong>, <strong>Firebase</strong>, <strong>Unity</strong> and <strong>Unreal Engine</strong>.
         </p>
-        <p>
-        </p>
         <hr></hr>
-        <h2>How I started</h2>
         <p>
             In school, I wanted to create videogames and enter the industry. In 2016 my first complete game was <strong>
             The Pixel</strong>, a simple mobile arcade game where pixels start to attack you and you have to use touch controls to destroy them.
