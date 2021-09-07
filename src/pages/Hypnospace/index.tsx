@@ -26,7 +26,7 @@ function HypnospacePage() {
         </div>
     );
 }
-
+/*
 function AudioPlayer() {
     const music = new Audio('./Assets/07 - DM Hazebeat 001.mp3');
 
@@ -35,5 +35,6 @@ function AudioPlayer() {
         </div>
     );
 }
+*/
 
 export default HypnospacePage;
