@@ -39,6 +39,7 @@ export function HomeContent() {
   }[] = [
     { displayName: "Curriculum Vitae", link: "https://firebasestorage.googleapis.com/v0/b/tom-rinaldi.appspot.com/o/public%2FWeb%2FCV.pdf?alt=media" },
     { displayName: "LinkedIn", link: "https://www.linkedin.com/in/tom%C3%A1s-rinaldi-50244a1a1/" },
+    { displayName: "Page Source Code", link: "https://github.com/tomi901/personal-webpage" },
   ];
 
   return (
