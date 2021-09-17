@@ -59,12 +59,13 @@ function TextFileExplorer() {
 
 const ElementView: React.FC<{
     element: Node;
+    displayName?: string;
     indentation: number;
     lastElement?: boolean;
- }> = ({ element, indentation, lastElement, children }) => {
+ }> = ({ element, displayName, indentation, lastElement, children }) => {
     return <p className="explorer-element">
-        {(indentation > 0) && `${"│\u00A0".repeat(indentation - 1)}${(lastElement ?? true) ? "└" : "├"}─ `} 
-        {element.name}
+        {(indentation > 0) && `${"│\u00A0\u00A0".repeat(indentation - 1)}${(lastElement ?? true) ? "└" : "├"}─ `} 
+        <span className="element-name">{displayName ?? element.name}</span>
         {children}
     </p>;
 }
@@ -76,7 +77,7 @@ const FolderView: React.FC<{
  }> = ({ folder, indentation, lastElement }) => {
     const childIndentation = (indentation ?? 0) + 1;
     return <div>
-        <ElementView element={folder} indentation={indentation ?? 0} lastElement={lastElement}></ElementView>
+        <ElementView element={folder} displayName={`${folder.name}/`} indentation={indentation ?? 0} lastElement={lastElement}></ElementView>
         {folder.folders?.map((v, i, { length }) =>
             <FolderView key={i} folder={v} indentation={childIndentation} lastElement={!folder.files && i >= (length - 1)} />
         )}

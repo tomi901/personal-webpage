@@ -1,0 +1,81 @@
+
+.hypnospace-page {
+    image-rendering: pixelated;
+    // filter: url('#pixelate');
+
+    padding: 80px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.audio-player {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+
+    width: 200px;
+    height: 100px;
+
+    background-color: #37373d;
+    border: solid #2d2d33;
+    border-width: 10px 10px 0px 0px;
+}
+
+
+
+@font-face {
+    font-family: pixeltitle;
+    src: url("./Assets/prstart.ttf");
+}
+
+@font-face {
+    font-family: pixel;
+    src: url("./Assets/SFPixelate.ttf");
+}
+
+body {
+    font-family: "pixel", Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 36px;
+    color: white;
+
+    background: url("./Assets/background.jpg");
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: "pixeltitle", monospace;
+}
+
+h1 {
+    animation: changeFontColor 1s infinite alternate;
+}
+
+@keyframes changeFontColor {
+    from {
+        color: orangered;
+    }
+    50% {
+        color: yellow;
+    }
+    to {
+        color: white;
+    }
+}
+
+.rot-anim {
+    animation: rotate 3s infinite;
+}
+@keyframes rotate {
+    from {
+        rotate: 5deg;
+    }
+    50% {
+        rotate: -5deg;
+    }
+    to {
+        rotate: 5deg;
+    }
+}
